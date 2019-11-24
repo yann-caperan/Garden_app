@@ -1,0 +1,13 @@
+<h1>Liste des plantes de <%= @garden.name %></h1>
+<ul>
+  <% @garden.plant.each do |plant| %>
+      <h2><%= plant.name %></h2>
+    </li>
+  <% end %>
+</ul>
+
+<%= simple_form_for [@plant, @garden] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "add a plant", class: "btn btn-primary" %>
+<% end %>
+
