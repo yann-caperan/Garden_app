@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Garden.destroy_all
+Plant.destroy_all
+
 puts 'Creating gardens...'
 jardin_yann = Garden.new(name: "Yann's garden")
 jardin_yann.save!
